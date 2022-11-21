@@ -10,5 +10,7 @@ git commit -m "escrever o commit" > commitar o codigo
 git clone + "endereço do projeto > clona um projeto web
 git pull nome da (de: branch) (para: branch) --allow-unrelated-histories > baixar o repositorio de onde pra onde com seus commits anteriores
 git push origin main > Subir o projeto
+git config --global user.name > coloca meu username
+git config --global user.email > coloca o email
 
 links orientações de como escrever commits > https://www.conventionalcommits.org/en/v1.0.0/
