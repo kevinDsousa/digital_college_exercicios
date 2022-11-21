@@ -1,0 +1,14 @@
+git init > Inicia o git
+git add README.md > adiciona o README
+git branch -M main > Troca a branch
+git checkout -b main > Cria a branch e já muda para main
+git remote > Verifica os ambientes de trabalho
+git remote add origin + o endereço do projeto > 
+git push -u origin main
+git reset > Desafaz o commit apos git add 
+git commit -m "escrever o commit" > commitar o codigo
+git clone + "endereço do projeto > clona um projeto web
+git pull nome da (de: branch) (para: branch) --allow-unrelated-histories > baixar o repositorio de onde pra onde com seus commits anteriores
+git push origin main > Subir o projeto
+
+links orientações de como escrever commits > https://www.conventionalcommits.org/en/v1.0.0/
