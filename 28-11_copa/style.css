@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+aside {
+    width: 20%;
+}
