@@ -3,13 +3,62 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    color: whitesmoke;
+}
+
+:root {
+    --card-color-primary: #338af3;
+    --card-title-border-color: #338af3;
+    --card-bg-color: #202024;
+      --bg: url(./assets/bg-blue.svg)
+  }
+
+body {
+    background: #121214 var(--bg) no-repeat top center/cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
 }
 
 section {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+    margin: 1rem 4rem;
 }
 
 aside {
-    width: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table tr {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--card-title-border-color);
+    margin: 2px;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
+}
+
+table tr td {
+    margin: 0.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-weight: bolder;
+}
+
+table tr td img {
+    width: 30px;
+    margin: 0 auto;
 }
