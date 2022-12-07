@@ -8,7 +8,13 @@
     <title>Treinando formulários</title>
 </head>
 <body>
-    <form>
+    <form class="form-content">
+        <label for="region">Region</label>
+        <select name="region" id="region">
+            <option value="Nordeste">Nordeste</option>
+            <option value="Norte">Norte</option>
+            <option value="Sul">Sul</option>
+        </select>
         <label for="state">State</label>
         <select name="state" id="state">
             <option value="item-1">CE</option>
@@ -27,7 +33,7 @@
             <option value="item-1">Guaramiranga</option>
         </select>
         <label for="public-place">Public Place</label>
-        <input type="text" name="public-place" id="public-place">
+        <input type="text" name="public-place" id="public-place" maxlength="50">
     </form>
 </body>
 </html>
