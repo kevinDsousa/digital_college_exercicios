@@ -3,7 +3,7 @@ Aqui ficará a linha do tempo de todos os exercicios propostos pela equipe da Di
 
 ## :white_check_mark: 14/11 - Criação de curriculo virtual
 
-Exercicio para realizar um curriculo virtual no qual apliquei HTML5 e CSS3 com conceitos básicos de FlexBox
+Exercicio para realizar um curriculo virtual no qual apliquei HTML5 e CSS3 com conceitos básicos de FlexBox.
 
 <img src="./github/layout.png">
 
