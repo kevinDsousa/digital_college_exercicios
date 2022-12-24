@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap'); 
+
 :root {
     --bg-color: #E5E5E5;
     --bg-footer: #1F1F1F;
@@ -10,6 +12,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -18,10 +21,56 @@ body {
 }
 
 main {
-    background-color: var(--bg-color)
+    background-color: var(--bg-color);
+    background-image: linear-gradient(170deg, #c7c6c6 20%, #fff 80%);
 }
 
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+    padding: 30px
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--btn-color);
+}
+
+header img {
+    width: 22px;
+    height: 22px;
+}
+
+section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+section div:first-child {
+    width: 583px;
+    height: 560px;
+    border-radius: 4px;
+    display: block;
+    background-color: #fff;
+}
+
+section div:first-child img {
+    width: 252px;
+    height: 515px;
+}
+
+section div:last-child img {
+    width: 256px;
+    height: 483px;
+}
 
 footer {
-    background-color: var(--bg-footer)
+    background-color: var(--bg-footer);
+    height: 450px;
 }
