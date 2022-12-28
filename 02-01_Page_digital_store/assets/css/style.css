@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 :root {
     --bg-color: #E5E5E5;
@@ -47,22 +47,88 @@ header img {
 
 section {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: flex-start;
     margin: 30px;
 }
 
 section div:first-child {
-    width: 583px;
-    height: 560px;
-    border-radius: 4px;
-    display: block;
+    width: 50%;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
 }
 
-section div:first-child img {
-    width: 252px;
-    height: 515px;
+section div:first-child div {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+section div:first-child div:nth-child(1) h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #1F1F1F;
+    margin-bottom: 10px;
+}
+
+section div:first-child div:nth-child(1) p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #474747;
+}
+
+section div:first-child div:nth-child(1) p a {
+    color: #474747;
+    text-decoration: underline;
+}
+
+section div:first-child div:nth-child(2) label,
+input {
+    color: #474747;
+    border: none;
+    border-radius: 8px;
+}
+
+section div:first-child div:nth-child(2) label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+section div:first-child div:nth-child(2) input {
+    background-color: #D8D8FA;
+    height: 60px;
+    width: 100%;
+    padding: 16px 24px;
+    margin-bottom: 10px;
+}
+
+section div:first-child div:nth-child(3) a {
+    color: #474747;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+section div:first-child div:nth-child(3) button {
+    background-color: #C92071;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/*tenis*/
+
+section div:last-child {
+    width: 50%;
 }
 
 section div:last-child img {
