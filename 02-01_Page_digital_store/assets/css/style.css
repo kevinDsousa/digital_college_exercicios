@@ -47,7 +47,7 @@ header img {
 
 section {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     align-items: flex-start;
     margin: 30px;
 }
@@ -125,17 +125,47 @@ section div:first-child div:nth-child(3) button {
     margin: 10px 0;
 }
 
+ section div:first-child div img {
+    width: 20px;
+    height: 18px;
+    margin-right: 5px;
+ }
+
+ section div:first-child div span {
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 170px;
+    padding-right: 5px;
+    color: #474747;
+ }
 /*tenis*/
 
 section div:last-child {
     width: 50%;
 }
 
-section div:last-child img {
-    width: 256px;
+.foot img{
+    width: 250px;
     height: 483px;
 }
 
+.foot img:first-child {
+    transform: rotate(-10deg) scale(1.1) translateY(-20px);
+}
+
+@media screen and (max-width: 460px) {
+    .foot {
+        display: none;
+    }
+
+    section div:first-child{
+        width: 100%;
+    }
+}
+
+.foot img:last-child {
+    transform: rotate(10deg);
+}
 footer {
     background-color: var(--bg-footer);
     height: 450px;

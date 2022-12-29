@@ -26,3 +26,4 @@ Utiizado Flexbox para alinhamento das caixas, design responsivo para mobiles.
 <img src="https://img.shields.io/badge/CSS-cascading%20style%20sheets-blue">
 
 <img src="./github/20-11.png">
+
