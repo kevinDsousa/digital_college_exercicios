@@ -24,17 +24,17 @@
                     estruturas internas ou bancos de dados. Aprenda HTML5, CSS3, Javascript, React, banco de dados e
                     outras. Torne-se um profissional completo e ganhe mais.</p>
             </div>
-            <form action="">
+            <form onsubmit="salvarNaAPI()">
                 <h3>Faça sua pré-matrícula</h3>
                 <p>Chegou a hora de você transformar sua vida, garanta sua vaga preenchendo os campos abaixo agora mesmo!</p>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome"/>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required/>
 
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email"/>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required/>
 
                 <label for="whatsapp">Whatsapp</label>
-                <input type="tel" name="whatsapp" id="whatsapp" placeholder="(00) 00000-0000"/>
+                <input type="tel" name="whatsapp" id="whatsapp" placeholder="(00) 00000-0000" required/>
 
                 <label for="objetivo">Objetivo</label>
                 <select name="objetivo" id="objetivo">
@@ -44,10 +44,11 @@
                     <option>Trabalhar de casa</option>
                     <option>Qualidade de vida</option>
                 </select>
-                <button>Enviar</button>
+                <button id="btn" type="submit">Enviar</button>
             </form>
         </section>
     </main>
+    <script src="../digital_plus/js/scripts.js"></script>
 </body>
 
 </html>
