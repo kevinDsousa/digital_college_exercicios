@@ -8,7 +8,7 @@ function salvarNaAPI() {
     }
 
     let btn = document.getElementById('btn');
-    btn.disabled = "true";
+    btn.disabled = true;
 
     fetch('https://63388a25383946bc7fe9a891.mockapi.io/digital-store-users',
     {
@@ -17,6 +17,10 @@ function salvarNaAPI() {
             "Content-type": "application/json"
         },
         body: JSON.stringify(aluno)
+    }).then(() => {
+        btn.disabled = false;
+        alert("Enviado com sucesso");
+        document.getElementById("cadastro").reset();
     });
 
 }
