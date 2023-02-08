@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animations</title>
+</head>
+<body>
+    <!--<div class="bolinha"></div>-->
+    
+    <form id="form">
+        <label for="">Email</label>
+        <input type="email" name="" id="">
+        <label for="">Senha</label>
+        <input type="password" name="" id="">
+        <button class="btn">Enviar</button>
+    </form>
+
+    <script>
+        let btn = document.querySelector(".btn");
+        let formulario = document.getElementById("form");
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            formulario.classList.add("mexer_botao");
+            formulario.reset();
+            setTimeout(function(){
+                formulario.classList.remove("mexer_botao");
+            }, 200)
+        })
+    </script>
+</body>
+</html>
