@@ -1,0 +1,11 @@
+.butauzin {
+    border-radius: 5px;
+    background-color: #262626;
+    color: wheat;
+    width: 150px;
+    height: 40px;
+}
+
+.butauzin span {
+    color: red;
+}
