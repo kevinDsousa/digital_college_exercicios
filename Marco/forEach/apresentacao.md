@@ -48,9 +48,12 @@ for(let i = 0; i < frutas.length; i = i + 1 ) {
 ```js
 const nomes = ['Nathan', 'Eduardo', 'Fabio', 'Lucas'];
 
-nomes.forEach(function(nome) {
+function funcao(nome) {
     console.log('Pessoas: ', nome);
-})
+
+}
+
+nomes.forEach(funcao)
 
             Resuldado
 
