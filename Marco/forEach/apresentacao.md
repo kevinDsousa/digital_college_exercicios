@@ -34,7 +34,7 @@ for(let i = 0; i < frutas.length; i = i + 1 ) {
     console.log('Fruta: ', frutas[i]);
 }
 
-            Resuldado: 
+            Resultado: 
 
                 Fruta: Banana
                 Fruta: Cereja
@@ -55,7 +55,7 @@ function funcao(nome) {
 
 nomes.forEach(funcao)
 
-            Resuldado
+            Resultado
 
                 Pessoas: Nathan
                 Pessoas: Eduardo
