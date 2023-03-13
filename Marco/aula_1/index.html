@@ -34,10 +34,10 @@
                     aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasRightLabel">Cadastrar</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" id="cadastro-fechar" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <form onsubmit="adicionarAluno()">
+                        <form id="cadastro" onsubmit="adicionarAluno()">
                             <label class="form-label" for="">Nome: </label>
                             <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required />
 
@@ -49,6 +49,31 @@
                             
                             <label class="form-label mt-2">Cidade: </label>
                             <input type="text" id="cidade" class="form-control" placeholder="Cidade" required/>
+
+                            <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightEditar"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Editar</h5>
+                        <button type="button" id="editar-fechar" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form id="editar" onsubmit="EditarAluno()">
+                            <label class="form-label" for="">Nome: </label>
+                            <input type="text" id="e_nome" class="form-control" placeholder="Digite seu nome" required />
+
+                            <label class="form-label mt-2">Email: </label>
+                            <input type="email" id="e_email" class="form-control" placeholder="Seu email" required/>
+
+                            <label class="form-label mt-2">Telefone: </label>
+                            <input type="tel" id="e_telefone" class="form-control" placeholder="Telefone" required/>
+                            
+                            <label class="form-label mt-2">Cidade: </label>
+                            <input type="text" id="e_cidade" class="form-control" placeholder="Cidade" required/>
 
                             <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
                         </form>
