@@ -14,15 +14,17 @@ let dbMeses = {
 };
 
 for (let index = 1; index <= 9; index++) {
-    document.querySelector("#mes").innerHTML += `<option>${dbMeses["0" + index]}</option>`;
+    document.querySelector("#mes").innerHTML += `<option value="0${index}">${dbMeses["0" + index]}</option>`;
 }
 
 for (let index = 10; index <= 12; index++) {
-    document.querySelector("#mes").innerHTML += `<option>${dbMeses[index]}</option>`;
+    document.querySelector("#mes").innerHTML += `<option value="${index}">${dbMeses[index]}</option>`;
 }
 
 for (let index = 2023; index < 2030; index++) {
-    document.querySelector("#ano").innerHTML += `<option>${index}</option>`
+    let valor = index.toString().substr(2, 2)
+
+    ano.innerHTML += `<option value="${valor}">${index}</option>`
 }
 
 /*for (let valor in dbMeses) {

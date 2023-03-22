@@ -30,9 +30,17 @@ function alterarNumero() {
   if (numero.value.length === 19) {
     numero.classList.add("is-valid");
   }
+  card_numero.innerHTML = numero.value;
+
+  if(numero.value.substr(0, 1) === "4") {
+    card_bandeira.innerHTML = '<img src="./visa.jpg" width="40px"/>'
+  } else if (numero.value.substr(0, 1) === "5") {
+    card_bandeira.innerHTML = '<img src="./master.png" width="40px"/>'
+  }
 }
 function alterarTitular() {
   titular.classList.remove("is-invalid");
+  card_titular.innerHTML = titular.value;
 }
 function alterarCVV() {
   cvv.classList.remove("is-invalid");
@@ -47,6 +55,8 @@ function alterarCVV() {
   if (cvv.value.length === 3) {
     cvv.classList.add("is-valid");
   }
+
+  card_cvv.innerHTML = cvv.value
 }
 function alterarCPF() {
   cpf.classList.remove("is-invalid");
@@ -64,7 +74,11 @@ function alterarCPF() {
 }
 function alterarMes() {
   mes.classList.remove("is-invalid");
+
+  card_validade.innerHTML = mes.value + "/" + ano.value;
 }
 function alterarAno() {
   ano.classList.remove("is-invalid");
+
+  card_validade.innerHTML = mes.value + "/" + ano.value;
 }
