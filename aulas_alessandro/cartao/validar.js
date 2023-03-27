@@ -26,20 +26,40 @@ function validarEnvio() {
 }
 
 function alterarNumero() {
+  let ultimoDigito = numero.value.substr(-1);
+
+  if (isNaN(ultimoDigito)) {
+    let resultado = numero.value.substr(0, numero.value.length - 1);
+    numero.value = resultado;
+  }
+
+  if (numero.value.length == 4) {
+    numero.value = numero.value.concat(" ");
+  }
+
+  if (numero.value.length == 9) {
+    numero.value = numero.value.concat(" ");
+  }
+
+  if (numero.value.length == 14) {
+    numero.value = numero.value.concat(" ");
+  }
+
   numero.classList.remove("is-invalid");
   if (numero.value.length === 19) {
     numero.classList.add("is-valid");
   }
   card_numero.innerHTML = numero.value;
 
-  if(numero.value.substr(0, 1) === "4") {
-    card_bandeira.innerHTML = '<img src="./visa.jpg" width="40px"/>'
+  if (numero.value.substr(0, 1) === "4") {
+    card_bandeira.innerHTML = '<img src="./visa.jpg" width="40px"/>';
   } else if (numero.value.substr(0, 1) === "5") {
-    card_bandeira.innerHTML = '<img src="./master.png" width="40px"/>'
+    card_bandeira.innerHTML = '<img src="./master.png" width="40px"/>';
   }
 }
 function alterarTitular() {
   titular.classList.remove("is-invalid");
+
   card_titular.innerHTML = titular.value;
 }
 function alterarCVV() {
@@ -56,7 +76,7 @@ function alterarCVV() {
     cvv.classList.add("is-valid");
   }
 
-  card_cvv.innerHTML = cvv.value
+  card_cvv.innerHTML = cvv.value;
 }
 function alterarCPF() {
   cpf.classList.remove("is-invalid");
@@ -71,6 +91,20 @@ function alterarCPF() {
   if (cpf.value.length === 11) {
     cpf.classList.add("is-valid");
   }
+
+  if(cpf.value.length == 3) {
+    cpf.value = cpf.value.concat(".");
+  }
+
+  if(cpf.value.length == 7) {
+    cpf.value = cpf.value.concat(".");
+  }
+
+  if(cpf.value.length == 11) {
+    cpf.value = cpf.value.concat("-");
+  } else{
+    cpf.value = cpf.value.slice(0,14)
+}
 }
 function alterarMes() {
   mes.classList.remove("is-invalid");
