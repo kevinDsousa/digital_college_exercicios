@@ -2,11 +2,12 @@ function formatCpf() {
   
   // verificar se é string
   let ultimoDigito = cpf.value.substr(-1);
+  //console.log(ultimoDigito)
   
   // se for string retirar o valor
   if (isNaN(ultimoDigito)) {
     let resultado = cpf.value.substr(0, cpf.value.length - 1);
-    
+    console.log(resultado);
     cpf.value = resultado;
   }
   
