@@ -71,19 +71,23 @@ let bebidas = [
     },
 ];
 
-bebidas.map((bebida) => {
-    document.querySelector('#tabela-dados').innerHTML += 
-    `
-    <tr>
+function atualizarTabela(lista) {
+    lista.map((bebida) => {
+        document.querySelector('#tabela-dados').innerHTML += 
+        `
+        <tr>
         <td>${bebida.id}</td>
-        <td>${bebida.nome}</td>
-        <td>${bebida.descricao}</td>
-        <td>${bebida.quantidade}</td>
-        <td>${bebida.foto}</td>
-        <td>
-            <button class="btn btn-outline-primary btn-sm">Editar</button>
-            <button class="btn btn-danger btn-sm">Excluir</button>
-        </td>
-    </tr>
-    `;
-})
+            <td>${bebida.nome}</td>
+            <td>${bebida.descricao}</td>
+            <td>${bebida.quantidade}</td>
+            <td>${bebida.foto}</td>
+            <td>
+                <button class="btn btn-outline-primary btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Excluir</button>
+            </td>
+        </tr>
+        `;
+    })  
+}
+
+atualizarTabela(bebidas);
