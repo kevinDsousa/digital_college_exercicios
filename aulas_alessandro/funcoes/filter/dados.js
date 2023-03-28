@@ -44,21 +44,21 @@ let bebidas = [
     {
         id: 7,
         nome: 'skol',
-        descricao: 'ks 600ml',
+        descricao: 'garrafa 600ml',
         quantidade: 180,
         foto: ''
     },
     {
         id: 8,
         nome: 'kaiser',
-        descricao: 'ks 600ml',
+        descricao: 'garrafa 600ml',
         quantidade: 10,
         foto: ''
     },
     {
         id: 9,
         nome: 'sao braz',
-        descricao: 'ks 900ml',
+        descricao: 'garrafa 900ml',
         quantidade: 100,
         foto: ''
     },
