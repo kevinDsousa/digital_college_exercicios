@@ -1,0 +1,150 @@
+/* reset.css */
+/* Reset de estilos padrão */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Correção de elementos que precisam de caixa de borda */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Fontes herdam cor */
+body {
+    color: inherit;
+}
+
+/* Corrigir padding para input */
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Remover a quebra de linha após elementos de bloco */
+br {
+    display: none;
+}
+
+/* Remover borda de links clicáveis */
+a:active,
+a:focus {
+    outline: 0;
+}
+
+/* global.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap');
+
+:root {
+    --icon-color: #ffd369;
+    --bg-color: #121212;
+    --bg-card: #1e1e1f;
+    --bg-information: #373737;
+    --text-hover: #d4b05d;
+    --avatar: #3B3B3C;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
