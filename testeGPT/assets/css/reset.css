@@ -1,132 +1,3 @@
-/* reset.css */
-/* Reset de estilos padrão */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* Correção de elementos que precisam de caixa de borda */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-/* Fontes herdam cor */
-body {
-    color: inherit;
-}
-
-/* Corrigir padding para input */
-input {
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-/* Remover a quebra de linha após elementos de bloco */
-br {
-    display: none;
-}
-
-/* Remover borda de links clicáveis */
-a:active,
-a:focus {
-    outline: 0;
-}
-
 /* global.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap');
 
@@ -148,3 +19,121 @@ a:focus {
     margin: 0;
     padding: 0;
 }
+
+/* Define o estilo do cabeçalho */
+#header {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center; /* Adiciona alinhamento centralizado */
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Define o estilo da navegação */
+  #header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Adiciona alinhamento centralizado */
+  }
+  
+  #header nav ul li {
+    margin-right: 20px;
+    position: relative; /* Adiciona posição relativa para efeito hover */
+  }
+  
+  #header nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  #header nav ul li a {
+    color: #fff;
+    font-size: 16px; /* Reduz o tamanho da letra */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #header nav ul li a:hover {
+    color: var(--text-hover);
+  }
+  
+  /* Define o estilo do ícone */
+  #header nav ul li a:before {
+    color: var(--icon-color);
+    content: "\f101";
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  /* Define o estilo do avatar */
+  #header .avatar {
+    background-color: var(--avatar);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  
+  #header .avatar img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Define o estilo do efeito hover */
+  #header nav ul li a:after {
+    background-color: var(--text-hover);
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #header nav ul li a:hover:after {
+    visibility: visible;
+    width: 100%;
+  }
+  
+  /* Define os estilos responsivos para telas menores */
+  @media only screen and (max-width: 1200px) {
+    #header nav ul li a {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #header nav ul li a {
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #header nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #header nav ul li {
+      margin: 10px 0;
+    }
+    
+    #header nav ul li a {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    #header nav ul li a {
+      font-size: 14px;
+    }
+  }
+  
