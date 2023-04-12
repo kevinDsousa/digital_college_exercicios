@@ -12,8 +12,9 @@
 
 :root {
     --fonte: 'Roboto', sans-serif;
-    --bg-color_1: #F5F5F5;
+    --bg-color_1: #cccccc;
     --bg-color_2: #455A64;
+    --bg-color_3: #ffc207;
 }
 
 body {
@@ -75,7 +76,7 @@ header nav ul li a:hover::after {
 }
 
 header nav ul li a.active {
-    color: #ffc207;
+    color: var(--bg-color_3);
     font-weight: bold;
 }
 
@@ -122,4 +123,91 @@ header.light nav .mode .mode-switch::after {
 
 header nav .mode .mode-switch.active::after {
     left: 25px;
+}
+
+#container {
+    padding: 60px 120px 0 120px;
+}
+
+#container h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+#container h2 button {
+    height: 40px;
+    padding: 0 26px;
+    border-radius:  5px;
+    border: 0;
+    background-color: var(--bg-color_3);
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+#container h2 button:hover {
+    background-color: #262626;
+    color: var(--bg-color_3)
+}
+
+#container .tabela {
+    background-color: #fff;
+    padding: 26px;
+    border-radius: 5px;
+    box-shadow:  0px 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+#tabela .acoes {
+    display: flex;
+    gap: 16px;
+}
+
+#tabela .acoes ion-icon {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color_3);
+    color: #262626;
+    border-radius: 20px;
+    padding: 10px;
+    transition-duration: 200ms;
+}
+
+#tabela .acoes ion-icon:hover {
+    color: var(--bg-color_3);
+    background-color: #262626;
+}
+
+#lateral {
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
+#lateral.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lateral .conteudo {
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition-delay: 200ms;
+    transition-duration: 300ms;
+}
+
+#lateral.active .conteudo {
+    right: 0;
 }

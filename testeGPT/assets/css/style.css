@@ -1,1 +1,51 @@
 @import url('./reset.css');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--avatar);
+}
+
+span {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px;
+}
+
+a {
+    margin: 10px;
+}
+
+a:hover img {
+    filter: invert(47%) sepia(91%) saturate(7420%) hue-rotate(305deg) brightness(93%) contrast(92%);
+}
+
+a img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    filter: invert(82%) sepia(0%) saturate(2089%) hue-rotate(328deg) brightness(106%) contrast(94%);
+}
