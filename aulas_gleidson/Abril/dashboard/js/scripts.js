@@ -18,11 +18,3 @@ let btnFechar = document.querySelector('.fechar-lateral');
 btnFechar.onclick = e => {
     lateral.classList.remove('active')
 }
-
-function listarCategorias() {
-    fetch('https://6439dfea90cd4ba563ef55e2.mockapi.io/api/v1/categorias')
-    .then(resp => resp.json())
-    .then(dados => {
-        
-    })
-}

@@ -31,42 +31,13 @@
             <table id="tabela">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Categoria</th>
                         <th>Status</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Refrigerantes</td>
-                        <td>Ativo</td>
-                        <td>
-                            <div class="acoes">
-                                <ion-icon name="create"></ion-icon>
-                                <ion-icon name="trash"></ion-icon>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fermentados</td>
-                        <td>Ativo</td>
-                        <td>
-                            <div class="acoes">
-                                <ion-icon name="create"></ion-icon>
-                                <ion-icon name="trash"></ion-icon>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Destilados</td>
-                        <td>Ativo</td>
-                        <td>
-                            <div class="acoes">
-                                <ion-icon name="create"></ion-icon>
-                                <ion-icon name="trash"></ion-icon>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -75,10 +46,10 @@
     <aside id="lateral">
         <div class="conteudo">
             <h3>Criar<ion-icon name="close" class="fechar-lateral"></ion-icon></h3>
-            <form action="">
+            <form onsubmit="adicionarCategoria()">
                 <label for="categoria">Categoria</label>
                 <input type="text" id="categoria" placeholder="Digite a categoria" required>
-                <button>
+                <button type="submit">
                     <span><ion-icon name="save"></ion-icon>Salvar</span>
                 </button>
             </form>
@@ -89,10 +60,6 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="./js/scripts.js"></script>
-    <script>
-        let table = new DataTable('#tabela', {
-            responsive: true
-        });
-    </script>
+    <script src="./js/categorias.js"></script>
 </body>
 </html>

@@ -303,3 +303,23 @@ header nav .mode .mode-switch.active::after {
     height: 20px;
     padding: 10px;
 }
+
+.btn {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--bg-color_3);
+    transition-duration: 200ms;
+    color:#455a64
+}
+
+.btn:hover {
+    background-color: #455A64;
+    color: var(--bg-color_3)
+}
+
+.btn:last-child {
+    margin-left: 16px;
+}
