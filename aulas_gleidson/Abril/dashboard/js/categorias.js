@@ -7,12 +7,12 @@ function listarCategorias () {
         tabela.DataTable({
             data: lista,
             columns: [
-                {data: 'id'},
+                {data: 'id', width: '50px'},
                 {data: 'categoria'},
                 {data: 'status', 
-                    render: function(data, type, row)
-                    {return data ==1 ? 'Ativo' : 'Inativo';}}, 
-                    { data: '',
+                render: function(data, type, row)
+                {return data ==1 ? 'Ativo' : 'Inativo';}}, 
+                { data: '',
                     render: function(data, type, row) {
                         return `<ion-icon class="btn" name="create"></ion-icon>
                                 <ion-icon class="btn" name="trash" onClick='removerCategoria(${row.id})'></ion-icon>`
