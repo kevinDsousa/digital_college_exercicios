@@ -25,9 +25,60 @@
                 </div>
             </nav>
     </header>
+
+    <section id="dashboard">
+        <ul class="dados">
+            <li>
+                <div class="box">
+                    <h6>Categorias</h6>
+                    <h2 id="qtdCategoria">0</h2>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <h6>Produtos</h6>
+                    <h2 id="qtdProdutos">0</h2>
+                </div>
+            </li>
+        </ul>
+
+        <div class="box">
+            <h3>Produtos por categoria</h3>
+            <canvas id="myChart"></canvas>
+          </div>
+          
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="./js/scripts.js"></script>
+    <script src="./js/dashboard.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# Categorias',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
 </body>
 </html>
