@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <p>nome: <span id="nome"></span></p>
+        <p>idade: <span id="idade"></span></p>
+        <p>github: <span id="github"></span></p>
+
+        <button id="carregar">Carregar dados</button>
+    </section>
+
+    <script>
+        async function CarregarDados() {
+            await fetch('http://localhost:8001/')
+                .then(resp => resp.json())
+                .then(resp => {
+                    nome.innerHTML = resp.name;
+                    idade.innerHTML = resp.idade;
+                    github.innerHTML = resp.github;
+                })
+
+        }
+        document.getElementById("carregar").addEventListener('click', () => {
+            CarregarDados();
+        })
+    </script>
+</body>
+
+</html>
