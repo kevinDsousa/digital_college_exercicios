@@ -1,51 +1,317 @@
-@import url('./reset.css');
-
+:root {
+    --icon-color: #ffd369;
+    --bg-color: #121212;
+    --bg-card: #1e1e1f;
+    --bg-information: #373737;
+    --text-hover: #d4b05d;
+    --avatar: #3B3B3C;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: var(--bg-color);
+    color: #fff;
 }
 
-section {
+/* estilo para o header */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
-    flex-direction: column;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--text-hover);
+}
+
+nav a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+nav a:hover:after,
+nav a:focus:after,
+nav a.active:after {
+    width: 100%;
+    background: var(--icon-color);
+}
+
+nav a.active {
+    background-color: var(--bg-information);
+}
+
+@media (max-width: 768px) {
+    #header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 1em;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    #header nav ul li {
+        margin: 0.5em;
+    }
+
+    #header nav ul li a {
+        display: block;
+        padding: 0.5em 1em;
+        color: var(--text-hover);
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #header nav ul li a:hover {
+        color: var(--bg-color);
+        background-color: var(--text-hover);
+    }
+
+    #header .menu-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 0.5em;
+        color: var(--icon-color);
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #header .menu-toggle:hover {
+        color: var(--text-hover);
+    }
+}
+
+
+@media (max-width: 768px) {
+    #personal-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #personal-info>div {
+        margin: 1em;
+    }
+}
+
+@media (min-width: 769px) {
+    #personal-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #personal-info>div {
+        display: flex;
+        align-items: center;
+    }
+
+    #personal-info>div:last-child {
+        margin-left: 1em;
+    }
+}
+
+#personal-info {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#personal-info div {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    margin-bottom: 20px;
 }
 
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-img {
-    width: 150px;
-    height: 150px;
+#personal-info img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background-color: var(--avatar);
+    border: 4px solid var(--bg-information);
+    margin-right: 20px;
 }
 
-span {
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 10px;
+#personal-info div:nth-child(2) img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
 }
 
-a {
-    margin: 10px;
+#personal-info div:nth-child(1) div {
+    color: var(--text-hover);
 }
 
-a:hover img {
-    filter: invert(47%) sepia(91%) saturate(7420%) hue-rotate(305deg) brightness(93%) contrast(92%);
+#personal-info div:nth-child(1) h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-a img {
+#personal-info div:nth-child(1) p {
+    font-size: 1.5rem;
+}
+
+#personal-info div:nth-child(2) img {
+    filter: invert(1);
+}
+
+#personal-info div:nth-child(2) a {
+    margin: 0 10px;
+}
+
+#personal-info div:nth-child(2) img:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+
+#about {
+    padding: 50px 0;
+    background-color: var(--bg-card);
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+#about li {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+#about li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+    transition: all 0.3s ease-in-out;
+}
+
+#about li a:hover {
+    color: var(--text-hover);
+}
+
+#about li a img {
     width: 30px;
-    height: 30px;
-    margin: 10px;
-    filter: invert(82%) sepia(0%) saturate(2089%) hue-rotate(328deg) brightness(106%) contrast(94%);
+    margin-right: 10px;
+}
+
+
+/* Seção habilidades */
+#skills {
+    margin: 80px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#skills h2 {
+    color: var(--text-primary);
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+#skills ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    width: 400px;
+    margin: 0 30px;
+    padding: 20px;
+    background-color: var(--bg-card);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#skills li:hover {
+    transform: translateY(-5px);
+}
+
+#skills h3 {
+    color: var(--text-secondary);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#skills p {
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
 }
