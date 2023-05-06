@@ -1,21 +1,37 @@
-import { useState } from "react";
 import "./global.css";
-import { Button } from "./Button";
+import axios from "axios";
+import Table from "./components/Table"
+import { useState, useEffect } from "react";
+
+/*const buscarCidades = async () => {
+  await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/CE/municipios')
+  .then(resp => resp.json())
+  .then(resp => {
+    console.log(resp)
+  })
+}*/
 
 function App() {
+  const [dados, setDados] = useState([])
+  const [uf, setUf] = useState('CE')
 
-  const [count, setCount] = useState(0);
-
-  function handclik() {
-    setCount(count + 1) // forma usual de realizar a contagem
+  useEffect(() => {
+    buscarCidades(uf);
+  }, [uf])
+  
+  const buscarCidades = async (estado="CE") => {
+    const response = await axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estado}/municipios`)
+    setDados(response.data)
   }
-
   return (
     <div>
-      <h1>{count}</h1>
-      <Button handleClick={handclik} children={"clique"}/>
+      <h1>Estados de {uf}</h1>
+      <button onClick={() => setUf(`CE`)}>CE</button>
+      <button onClick={() => setUf(`RJ`)}>RJ</button>
+      <button onClick={() => setUf(`RN`)}>RN</button>
+      <Table data={dados}></Table>
     </div>
-  );
+  )
 }
 
 export default App;
