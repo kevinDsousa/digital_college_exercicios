@@ -1,33 +1,19 @@
-import Table from "./components/Table";
-
+import { useState } from "react";
 import "./global.css";
+import { Button } from "./Button";
 
 function App() {
-  const data = [
-    {
-      id: 1,
-      nome: "Ronier da Silva Lima",
-      usuario: "ronier.lima",
-      email: "ronier.lima@email",
-    },
-    {
-      id: 2,
-      nome: "Ronier da Silva Lima",
-      usuario: "ronier.lima",
-      email: "ronier.lima@email",
-    },
-    {
-      id: 3,
-      nome: "Ronier da Silva Lima",
-      usuario: "ronier.lima",
-      email: "ronier.lima@email",
-    },
-  ];
 
+  const [count, setCount] = useState(0);
+
+  function handclik() {
+    setCount(count + 1) // forma usual de realizar a contagem
+  }
 
   return (
-    <div id="app">
-      <Table data={data} />
+    <div>
+      <h1>{count}</h1>
+      <Button handleClick={handclik} children={"clique"}/>
     </div>
   );
 }

@@ -1,11 +1,11 @@
-export function Button(props) {
+import { useState } from "react";
 
+export function Button({children, handleClick}) {
     return (
       <button
-        disabled={props.disabled}
-        className={`btn ${props.disabled ? "" : props.tipo}`}
+        onClick={handleClick}
       >
-        {props.children}
+        {children}
       </button>
     );
   }
