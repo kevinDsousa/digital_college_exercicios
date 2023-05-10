@@ -19,12 +19,10 @@
 
     <script>
         async function CarregarDados() {
-            await fetch('http://localhost:8001/')
+            await fetch('http://localhost:3000/')
                 .then(resp => resp.json())
                 .then(resp => {
-                    nome.innerHTML = resp.name;
-                    idade.innerHTML = resp.idade;
-                    github.innerHTML = resp.github;
+                    console.log(resp);
                 })
 
         }

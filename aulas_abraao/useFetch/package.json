@@ -1,11 +1,22 @@
 {
-  "name": "usefetch",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "use_fetch",
+  "version": "0.0.1",
+  "description": "aplicação que faz requisições dos dados",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "fetch"
+  ],
+  "author": "kevin sousa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
