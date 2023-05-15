@@ -23,3 +23,36 @@ header a {
   margin: 10px 0;
   color: #fff;
 } 
+
+.centro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.centro.dark {
+  background-color: #262626;
+
+}
+
+.switch {
+  line-height: 40px;
+  background-color: #313131;
+  color: #ccc;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+button {
+  background-color: blueviolet !important;
+  padding: 0 26px;
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  line-height: 46px;
+}
