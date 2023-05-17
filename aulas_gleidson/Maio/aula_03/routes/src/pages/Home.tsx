@@ -5,6 +5,10 @@ export const Home = () => {
     const [contador, setContador] = React.useState(0)
     const [interruptor, setInterruptor] = React.useState(false)
 
+    React.useEffect(() => {
+        console.log('Test');
+    }, [interruptor])
+
     return (
         <>
             <div className={interruptor ? 'centro dark' : 'centro'}>
