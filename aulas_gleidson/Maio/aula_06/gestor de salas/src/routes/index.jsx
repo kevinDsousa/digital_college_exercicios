@@ -4,6 +4,7 @@ import { Home } from "../pages/Home"
 import { Salas } from "../pages/Salas"
 import { Responsaveis } from "../pages/Responsaveis"
 import { Eventos } from "../pages/Eventos"
+import { NotFound } from "../pages/NotFound"
 
 export const Ways = () => {
   return (
@@ -11,7 +12,7 @@ export const Ways = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />}>
-            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/salas" element={<Salas />} />
             <Route path="/responsaveis" element={<Responsaveis />} />
             <Route path="/eventos" element={<Eventos />} />
