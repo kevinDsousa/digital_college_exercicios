@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
 // eslint-disable-next-line react/prop-types
-export const Button = ({title, outlined, pilled, click}) => {
+export const Button = ({classe, click, title}) => {
     return(
-        <Container className={[outlined && 'outlined', pilled && 'pilled']} onClick={click}>
+        <Container className={classe} onClick={click}>
             {title}
         </Container>
     );
@@ -31,5 +31,13 @@ const Container = styled.button`
     }
     &.hover {
         background-color: #8d33e0;
+    }
+    &.circle {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    }
+    &.w-full {
+        width: 100%;
     }
 `;
