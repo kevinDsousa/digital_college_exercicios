@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Table from "../components/Table";
-import { IBGEApi } from "../IBGEApi";
+import { IBGEApi } from "../services/IBGEApi";
 
 const ESTADO_DEFAULT = "CE";
 
