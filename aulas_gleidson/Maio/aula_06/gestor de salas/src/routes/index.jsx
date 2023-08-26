@@ -19,7 +19,7 @@ export const Ways = () => {
         <Routes>
           {logado ? (
             <Route path="/" element={<Dashboard />}>
-              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/salas" element={<Salas />} />
               <Route path="/responsaveis" element={<Responsaveis />} />
               <Route path="/eventos" element={<Eventos />} />
